@@ -7,7 +7,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <PackageId>CSharpOpenHABTestSuite</PackageId>
-    <Version>2.0.0</Version>
+    <Version>2.0.1</Version>
     <Authors>Michael Christian Dörflinger</Authors>
     <Description>Tests for openHAB installations (items, things, rules, links, persistence, sitemaps) – the C# counterpart of openhab-test-suite, built on CSharpOpenHABRestClient 2.</Description>
     <PackageTags>openhab;smarthome;testing;rest;home-automation</PackageTags>
@@ -19,7 +19,7 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="CSharpOpenHABRestClient" Version="2.0.0" />
+    <PackageReference Include="CSharpOpenHABRestClient" Version="2.0.1" />
   </ItemGroup>
   <ItemGroup>
     <None Include="../../README.md" Pack="true" PackagePath="/" />

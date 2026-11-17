@@ -29,11 +29,14 @@ What 2.0.0 changes: [BUGS-1.0.0.md](BUGS-1.0.0.md).
 ## Installation
 
 ```bash
-dotnet add package CSharpOpenHABTestSuite --version 2.0.0
+dotnet add package CSharpOpenHABTestSuite --version 2.0.1
 ```
 
 Targets `netstandard2.1`, `net8.0` and `net10.0`; the only dependency is
-`CSharpOpenHABRestClient` 2.0.0.
+`CSharpOpenHABRestClient` 2.0.1.
+
+2.0.1 only raises the dependency to `CSharpOpenHABRestClient` 2.0.1 (the client package 2.0.0 on
+nuget.org was built before its last fixes); the test suite itself is unchanged.
 
 ## How a command test works
 
