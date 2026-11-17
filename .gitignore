@@ -1,6 +1,9 @@
 bin/
 obj/
+dist/
 *.user
 .vs/
-*.nupkg
-*.snupkg
+.idea/
+TestResults/
+.env
+__pycache__/

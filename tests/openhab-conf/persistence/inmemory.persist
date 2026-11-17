@@ -1,0 +1,4 @@
+// In-Memory: jede Änderung aller Items im Arbeitsspeicher (für Übungen und Tests)
+Items {
+    * : strategy = everyChange
+}

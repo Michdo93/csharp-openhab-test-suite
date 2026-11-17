@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/OpenHABTestSuite/OpenHABTestSuite.csproj" />
+  <Project Path="tests/OpenHABTestSuite.Tests/OpenHABTestSuite.Tests.csproj" />
+</Solution>

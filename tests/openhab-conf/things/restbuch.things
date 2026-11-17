@@ -1,0 +1,3 @@
+// Things der Übungsumgebung – ohne Hardware: Das Astro-Binding berechnet
+// Sonnenstand, Auf- und Untergang allein aus Ort und Uhrzeit.
+Thing astro:sun:zuhause "Sonnendaten Zuhause" [ geolocation="48.0950,8.6630", interval=60 ]

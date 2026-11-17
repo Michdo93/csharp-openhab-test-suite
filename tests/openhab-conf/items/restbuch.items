@@ -1,0 +1,20 @@
+// Übungs-Items der Reihe »openHAB REST API« – in allen Bänden identisch
+Group  gHaus         "Haus"           ["Location"]
+Group  gWohnzimmer   "Wohnzimmer"     (gHaus) ["LivingRoom"]
+Group  gKueche       "Küche"          (gHaus) ["Kitchen"]
+Group  gWerkstatt    "Werkstatt"      (gHaus) ["Room"]
+Group:Switch:OR(ON,OFF) gLichter "Alle Lichter [%d an]" (gHaus)
+
+Switch Wohnzimmer_Licht      "Deckenlicht"       <light>       (gWohnzimmer, gLichter) ["Switch", "Light"]
+Dimmer Wohnzimmer_Dimmer     "Leselampe [%d %%]" <light>       (gWohnzimmer, gLichter) ["Control", "Light"]
+Color  Wohnzimmer_Farblicht  "Farblicht"         <colorlight>  (gWohnzimmer) ["Control", "Light"]
+Number:Temperature Wohnzimmer_Temperatur "Temperatur [%.1f °C]" <temperature> (gWohnzimmer) ["Measurement", "Temperature"]
+Rollershutter Kueche_Rollladen "Rollladen [%d %%]" <rollershutter> (gKueche) ["Control", "Opening"]
+Contact Flur_Haustuer        "Haustür [%s]"      <door>        (gHaus) ["Status", "Opening"]
+String  Haus_Status          "Status [%s]"       <text>        (gHaus)
+
+// Philosophie 2: ein selbst gebautes Gerät meldet sich bei openHAB
+Number:Temperature Werkstatt_Temperatur "Werkstatt [%.1f °C]" <temperature> (gWerkstatt) ["Measurement", "Temperature"]
+Number:Dimensionless Werkstatt_Feuchte  "Feuchte [%.0f %%]"   <humidity>    (gWerkstatt) ["Measurement", "Humidity"] { unit="%" }
+Switch  Werkstatt_Luefter    "Lüfter"            <fan>         (gWerkstatt) ["Switch"] { autoupdate="false" }
+DateTime Werkstatt_LetzteMeldung "Letzte Meldung [%1$tH:%1$tM:%1$tS]" <time> (gWerkstatt)

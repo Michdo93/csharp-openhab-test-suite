@@ -1,0 +1,23 @@
+// Regeln der Übungsumgebung (Rules DSL).
+// Die Regel-UID einer Datei-Regel lautet <Dateiname>-<Nummer>, hier also
+// »restbuch-1«. Sie wird in den Kapiteln zu Regeln und Tests verwendet.
+
+rule "Gute Nacht"
+when
+    Item Haus_Status received command "Gute Nacht"
+then
+    gLichter.sendCommand(OFF)
+    Haus_Status.postUpdate("Nachtruhe")
+end
+
+// Startwerte für Items ohne Gerät, damit die Beispiele sofort sinnvolle Zustände zeigen
+rule "Startwerte"
+when
+    System started
+then
+    if (Wohnzimmer_Temperatur.state == NULL) Wohnzimmer_Temperatur.postUpdate("21.5 °C")
+    if (Flur_Haustuer.state == NULL)         Flur_Haustuer.postUpdate(CLOSED)
+    if (Kueche_Rollladen.state == NULL)      Kueche_Rollladen.postUpdate(0)
+    if (Werkstatt_Luefter.state == NULL)     Werkstatt_Luefter.postUpdate(OFF)
+    if (Haus_Status.state == NULL)           Haus_Status.postUpdate("Alle zu Hause")
+end

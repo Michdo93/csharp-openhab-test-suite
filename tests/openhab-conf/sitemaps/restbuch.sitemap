@@ -1,0 +1,22 @@
+sitemap restbuch label="REST-Buch" {
+    Frame label="Wohnzimmer" {
+        Switch      item=Wohnzimmer_Licht
+        Slider      item=Wohnzimmer_Dimmer
+        Colorpicker item=Wohnzimmer_Farblicht
+        Text        item=Wohnzimmer_Temperatur
+    }
+    Frame label="Küche und Flur" {
+        Switch item=Kueche_Rollladen
+        Text   item=Flur_Haustuer
+    }
+    Frame label="Werkstatt (DIY-Gerät)" {
+        Text   item=Werkstatt_Temperatur
+        Text   item=Werkstatt_Feuchte
+        Switch item=Werkstatt_Luefter
+        Text   item=Werkstatt_LetzteMeldung
+    }
+    Frame label="Haus" {
+        Switch item=gLichter
+        Text   item=Haus_Status
+    }
+}

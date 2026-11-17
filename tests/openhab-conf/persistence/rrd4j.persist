@@ -1,0 +1,7 @@
+// RRD4j: Zahlenwerte jede Minute und bei jeder Änderung; Zustände nach Neustart wiederherstellen
+Strategies {
+    everyMinute : "0 * * * * ?"
+}
+Items {
+    * : strategy = everyChange, everyMinute, restoreOnStartup
+}
